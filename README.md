@@ -32,11 +32,11 @@ tidak akan menghasilkan error
 
 ### Cara Implementasi
 1. Program dibuat dengan command `flutter create counter_7`.
-2. Membuat variabel _counter dengan tipe data int pada class _MyHomePageState yang akan menyimpan value angka.
-3. Membuat variabel _genapGanjil dengan tipe data String pada class _MyHomePageState yang akan menyimpan value GENAP atau GANJIL.
-4. Widget Text digunakan untuk mengganti title program, menampilkan variabel _genapGanjil, dan variabel _counter.
+2. Membuat variabel `_counter` dengan tipe data int pada class `_MyHomePageState` yang akan menyimpan value angka.
+3. Membuat variabel `_genapGanjil` dengan tipe data String pada class `_MyHomePageState` yang akan menyimpan value GENAP atau GANJIL.
+4. Widget Text digunakan untuk mengganti title program, menampilkan variabel `_genapGanjil`, dan variabel `_counter`.
 5. Widget Button berupa FloatingButtonAction ditambahkan pada bawah kiri dan kanan.
 6. Widget Styling digunakan untuk mengubah tampilan atau style dari widget, seperti perubahan warna dan pemosisian widget. Pemosisian dilakukan dengan memanfaatkan Stack dengan alignment bottomLeft dan bottomRight. Padding dilakukan terhadap button pada bawah kiri karena posisi defaultnya menyebababkan button tersebut keluar dari layar.
-7. Setiap button mempunyai atribut onPressed berupa function sesuai yang akan dipanggil setiap user melakukan klik pada button.
-8. Function _decrementCounter() akan melakukan decrement pada _counter dan mengecek apakah _counter ganjil atau genap yang akan mengubah _genapGanjil dengan value yang sesuai. Function _incrementCounter() akan melakukan increment pada _counter dan juga akan melakukan pengecekan terhadap ganjil genapnya.
-9. Bonus diimplementasikan dengan memanfaatkan conditional dengan ternary operator yang akan mengecek apakah _counter bernilai 0. Jika bernilai 0, maka button tidak akan dibuat. Berdasarkan sifat setState(), button yang tidak dibuat ini seakan-akan terlihat seperti button dihapus ketika nilai di-decrement menjadi 0.
+7. Setiap button mempunyai atribut `onPressed` berupa function sesuai yang akan dipanggil setiap user melakukan klik pada button.
+8. Function `_decrementCounter()` akan melakukan decrement pada `_counter` dan mengecek apakah `_counter` ganjil atau genap yang akan mengubah `_genapGanjil` dengan value yang sesuai. Function `_incrementCounter()` akan melakukan increment pada `_counter` dan juga akan melakukan pengecekan terhadap ganjil genapnya.
+9. Bonus diimplementasikan dengan memanfaatkan conditional dengan ternary operator yang akan mengecek apakah `_counter` bernilai 0. Jika bernilai 0, maka button tidak akan dibuat. Berdasarkan sifat `setState()`, button yang tidak dibuat ini seakan-akan terlihat seperti button dihapus ketika nilai di-decrement menjadi 0.
