@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/databudget.dart';
+import 'package:counter_7/page/databudget.dart';
 import 'package:flutter/services.dart';
+import 'package:counter_7/page/mywatchlist.dart';
 
 var listBudget = [];
 class MyTambahBudgetPage extends StatefulWidget {
@@ -71,6 +72,16 @@ class _MyTambahBudgetPageState extends State<MyTambahBudgetPage> {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const MyDataBudgetPage()),
+                );
+              },
+            ),
+
+            ListTile(
+              title: const Text("My Watch List"),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyWatchListPage()),
                 );
               },
             ),

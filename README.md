@@ -1,4 +1,4 @@
-# README Tugas 7 dan 8
+# README Tugas 7, 8, dan 9
 
 ## Penjelasan Tugas 7
 
@@ -71,3 +71,25 @@ Navigator bekerja dengan stack. Page baru akan di-push dan akan ditampilkan. Unt
 6. Dropdown berisi data Pemasukkan atau Pengeluaran. Dengan hintnya adalah "Pilih Jenis".
 7. Button setelah diklik akan membuat objek budget dengan parameter judul, nominal, dan tipe budget. Lalu memasukkannya ke dalam array.
 9. databudget.dart memanfaatkan ListView builder untuk membuat linear array of widget yang dapat di-scroll berdasarkan data. Dalam kasus ini, data yang digunakan adalah data dari list yang berisi object budget. itemCount berisikan panjang dari list tersebut. Lalu ListView builder akan membuat widget Card untuk menampilkan data dari object tersebut. Data yang ditampilkan adalah judul, nominal, dan tipe budget. Jika list masih kosong, atau belum ada data yang ditambahkan, maka halaman databudget hanya akan menampilkan Text yang akan memberitahu pengguna bahwa mereka belum menambahkan data.
+
+## Penjelasan Tugas 9
+### Melakukan Pengambilan Data JSON Tanpa Membuat Model
+JSON dapat di-fetch tanpa melalui pembuatan model terlebih dahulu. Namun, hal tersebut bukanlah best practice karena bertujuan untuk meminimalkan data loss serta mampu menampung seluruh data JSON yang di-fetch.
+
+### Widget yang Digunakan
+Selain widget-widget yang digunakan pada tugas-tugas sebelumnya. Pada tugas 9 ini, memanfaatkan widget InkWell agar setiap elemen pada ListView mampu diimplementasikan onTap yang akan menampilkan detail setiap watchlist yang diklik. Spacer digunakan sebagai pengisi whitespace untuk meletakkan button di posisi paling bawah. SizedBox digunakan sebagai pengatur spacing atau gap antar widget.
+
+### Mekanisme Pengambilan Data JSON
+1. Membuat model pengambilan JSON.
+2. Memanfaatkan http.get untuk melakukan fetching terhadap website yang kita inginkan. URL dan header disesuaikan.
+3. Men-decode response dari GET tersebut dengan `jsonDecode()`.
+4. Menampilkan data dengan FutureBuilder dengan mengimplementasikan ListView builder.
+
+### Cara Implementasi
+
+1. Melakukan penambahan page baru pada drawer.
+2. Melakukan implementasi pengambilan JSON. Implementasi pengambilan JSON seperti yang sudah dijelaskan di atas.
+3. Menampilkan setiap data JSON yang sudah di-fetch dengan menggunakan ListView Builder, dengan child-nya yang sudah di-wrap oleh InkWell agar bisa diterapkan onTap
+4. Setiap pemanggilan onTap, data JSON tersebut akan dikirimkan ke suatu page baru.
+5. Membuat page baru tersebut, berdasarkan data JSON tertentu, maka akan menampilkan detail dari watchlist tersebut.
+6. Tombol back disediakan pada page baru tersebut untuk bisa kembali ke ListView data JSON.
